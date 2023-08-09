@@ -1,0 +1,159 @@
+  <%- include ("./partials/cabecera") %> 
+
+<style>
+.oval-line {
+  width: 100%;
+  height: 150px;
+  border-bottom-left-radius: 40%;
+  border-bottom-right-radius: 40%;
+  background-color: rgb(18, 239, 18);
+  border-bottom: 2px solid #000;
+
+}
+
+.container {
+        position: relative;
+        display: inline-block;
+        margin-top: 50px;
+    }
+
+.container span {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 85%;
+    text-align: center;
+    color: white;
+    font-weight: 800;
+    font-size: 27px;
+    -webkit-text-stroke: 2px black;
+}
+
+.container p {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 65%;
+    text-align: center;
+    color: white;
+    font-weight: 800;
+    font-size: 20px;
+    -webkit-text-stroke: 1px black;
+    margin-top: -25px;
+}
+.container .segundo {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 85%;
+    text-align: center;
+    color: white;
+    font-weight: 800;
+    font-size: 20px;
+    -webkit-text-stroke: 1px black;
+}
+
+.container img {
+    width: 100%;
+    border-radius: 50px;
+    box-shadow: 0 22px 20px rgba(62, 128, 125, 0.5);
+}
+
+@media (min-width: 800px) {
+    .container img{
+        width: 75%;
+    }
+  }
+@media (min-width: 700px) {
+    .cont-img{
+        margin-left: 300px !important;
+    }
+     .cont-img2{
+        margin-right: 300px !important;
+    }
+  }
+   
+  .text-input {
+  border: none;
+  background-color: transparent;
+  font-size: inherit;
+  color: inherit;
+  appearance: textfield;
+  -moz-appearance: textfield;
+  -webkit-appearance: textfield;
+  opacity: 1;
+  pointer-events: none;
+}
+
+</style>
+
+<!-- Menu arriba -->
+<div class="oval-line">
+    <div>
+        <a href="">
+            <img src="./perfil/<%- fotoPerfil %>" alt="" style="width: 50px; border-radius: 50%; margin-top:45px; margin-left: 20px;">
+        </a>
+    </div>
+
+    <div class="text-center" style="margin-top: -70px;">
+        <span style="font-weight: 800; font-size: 20px;">Pago</span>
+    </div>
+    <div class="text-center">
+        <img class="" src="./logo/icon black.png" alt="" style="width: 60px;">
+    </div>
+    
+    
+    <div style="width: 100%; margin-top: -10px;">
+        <div style="display: flex; justify-content: space-between;">
+            <a href="#">
+                <img class="cont-img" src="https://img.icons8.com/?size=512&id=2287GodioQ7D&format=png" alt="" style="width: 30px; margin-left: 70px;">
+            </a>
+        
+            <a href="#">
+                <img class="cont-img2" src="https://img.icons8.com/?size=512&id=Q4SSPv6y2vU9&format=png" alt="" style="width: 30px; margin-right: 70px;">
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- Card -->
+<div class="text-dark contenedor-card" style="display: flex; flex-wrap: wrap; width: 100%; text-align: center; margin-top: 40px;">
+
+    <form class="m-auto mt-5" action="<%= url %>" method="post">
+        <input type="text" name="token_ws" value="<%= token %>" hidden/>
+        <p class="text-dark" style="font-weight: 800; font-size: 25px;"><%= planDeportes.Descripcion %></p>
+        <p class="text-dark" style="font-weight: 800; font-size: 20px;">Duración: <%= planDeportes.Tiempo %></p>
+
+        <div style="flex-basis: 50%;">
+            <a href="#" class="container">
+                <img src="<%= planDeportes.Foto %>" alt="" style="width: 171px; height: 171px;">
+            </a>
+        </div>
+
+        <div class="m-auto text-center mt-4">
+            <p class="text-center" style="font-weight: 800;">Precio $</p>
+            <input class="text-input text-center" type="number" placeholder="Cantidad" name="monto" value="<%= planDeportes.Precio %>" required style="font-weight: 800;">
+        </div>
+        
+        <button class="w-100 mt-5 btn btn-lg" type="submit" style="background-color: rgb(18, 239, 18); border-radius: 20px 20px 20px 20px; border: 2px solid #000;">Comprar</button>
+      </form>
+ </div>
+  
+<!-- Menu de abajo -->
+ <div style="position: fixed; bottom: 50px; width: 100%; height: 50px;">
+    <div style="display: flex; justify-content: space-between;">
+      <a href="/">
+        <img src="https://img.icons8.com/?size=512&id=BE56i0LQZMIW&format=png" alt="" style="width: 40px; margin-left: 45px;">
+      </a>
+  
+      <a href="ajustes">
+        <img src="https://img.icons8.com/?size=512&id=53420&format=png" alt="" style="width: 40px; margin-right: 45px;">
+      </a>
+    </div>
+  </div>
+  
+  
+<%- include ("./partials/pie") %> 

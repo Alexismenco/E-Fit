@@ -1,0 +1,112 @@
+<%- include ("./partials/cabecera") %> 
+
+<style>
+  .oval-line {
+    width: 100%;
+    height: 150px;
+    border-bottom-left-radius: 40%;
+    border-bottom-right-radius: 40%;
+    background-color: rgb(18, 239, 18);
+    border-bottom: 2px solid#000;
+
+
+  }
+  hr {
+    border-top: 2px solid rgb(108, 104, 104);
+  }
+
+</style>
+
+  <!-- Menu arriba -->
+  <div class="oval-line">
+    <div>
+        <a href="#">
+            <img src="<%- fotoPerfil %>" alt="" style="width: 50px; border-radius: 50%; margin-top:45px; margin-left: 20px;">
+        </a>
+    </div>
+  
+    <div class="text-center" style="margin-top: -70px;">
+        <span style="font-weight: 800; font-size: 20px;">Perfil</span>
+    </div>
+   
+    <div style="width: 100%; margin-top: 50px;">
+        <div style="display: flex; justify-content: space-between;">
+            <a href="#">
+                <img class="cont-img" src="https://img.icons8.com/?size=512&id=2287GodioQ7D&format=png" alt="" style="width: 30px; margin-left: 70px;">
+            </a>
+        
+            <a href="#">
+                <img class="cont-img2" src="https://img.icons8.com/?size=512&id=Q4SSPv6y2vU9&format=png" alt="" style="width: 30px; margin-right: 70px;">
+            </a>
+        </div>
+    </div>
+
+
+    <!-- Boton volver -->
+    <div style="width: 100%; margin-top: 55px;">
+      <div style="display: flex; justify-content: space-between;">
+          <a href="/ajustes" style="text-decoration: none; font-weight: 800; font-size: 25px;">
+              <img class="cont-img" src="https://img.icons8.com/?size=512&id=9045&format=png" alt="" style="width: 30px;margin-top: -12px;; margin-left: 10px;">
+              Volver
+          </a>
+      </div>
+  </div>
+
+</div>
+
+
+  <div class="text-center mt-4">
+    <img class="m-auto" src="https://img.icons8.com/?size=512&id=52234&format=png" alt="" style="width: 40px; border-radius: 50%;">
+    <br>
+  </div>
+  <hr>
+  
+  <form class="text-center" action="/perfil" method="post" enctype="multipart/form-data">
+    <h3 class="text-dark" style="display: inline-flex;">
+      <img src="https://img.icons8.com/?size=512&id=dNnPCJ6QaOdi&format=png"style="width: 40px;" />
+      <span style="margin-left: 10px; font-weight: 600;">Cambiar foto</span></h3>
+    <a href="/perfil" style="display: block;">
+      <img class="" style="width: 150px; margin-top: 8px; border-radius: 50%;" src="<%- fotoPerfil %>"/>
+    </a>
+    <div class="form-group row w-50 m-auto mt-2">
+      <label for="foto" class="text-dark" style="font-weight: 600;">Suba su nueva imagen</label>
+        <input type="file" class=" m-auto text-dark mt-2 form-control" id="foto" name="foto">
+    </div>
+    <div class="form-group  m-auto">
+        <button class="w-75 mt-4 btn btn-lg" type="submit" style="background-color: rgb(18, 239, 18); border-radius: 20px 20px 20px 20px;">Actualizar foto</button>
+    </div>
+  </form>
+  <hr>
+
+  <form class="text-center mt-5" action="/perfil" method="post">
+    <h3 class="text-dark" style="display: inline-flex;">
+      <img src="https://img.icons8.com/?size=512&id=xJKiXWNzBh9L&format=png" alt=""style="width: 40px;" />
+      <span class="" style="margin-left: 10px; font-weight: 600;">Cambiar Nombre</span>
+    </h3>
+    
+    <div class="form-group row w-50 m-auto">
+        <span class="text-dark" style="font-weight: 600;">Nombre actual: <%- nombre %></span>
+      <label for="nombre" class="text-dark" style="font-weight: 600;">Ingrese su nuevo nombre</label>
+        <input type="text" class=" m-auto text-dark form-control" id="nombre" placeholder="Nombre"  name="nombre" required>
+    </div>
+    <div class="form-group">
+        <button class="w-75 mt-4 btn btn-lg" type="submit" style="background-color: rgb(18, 239, 18); border-radius: 20px 20px 20px 20px;">Actualizar nombre</button>
+    </div>
+  </form>
+  <hr>
+
+    <!-- Menu de abajo -->
+    <div style="position: fixed; bottom: 50px; width: 100%; height: 50px;">
+      <div style="display: flex; justify-content: space-between;">
+        <a href="/">
+          <img src="https://img.icons8.com/?size=512&id=BE56i0LQZMIW&format=png" alt="" style="width: 40px; margin-left: 45px;">
+        </a>
+    
+        <a href="/ajustes">
+          <img src="https://img.icons8.com/?size=512&id=53420&format=png" alt="" style="width: 40px; margin-right: 45px;">
+        </a>
+      </div>
+    </div>
+
+
+<%- include ("./partials/pie") %> 

@@ -1,0 +1,428 @@
+<%- include ("./partials/cabecera") %> 
+
+<style>
+.oval-line {
+  width: 100%;
+  height: 150px;
+  border-bottom-left-radius: 40%;
+  border-bottom-right-radius: 40%;
+  background-color: rgb(18, 239, 18);
+  border-bottom: 2px solid #000;
+
+
+}
+
+.container {
+        position: relative;
+        display: inline-block;
+        margin-top: 50px;
+        text-decoration: none;
+    }
+
+.container span {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 85%;
+    text-align: center;
+    color: white;
+    font-weight: 800;
+    font-size: 25px;
+    -webkit-text-stroke: 1px black;
+}
+
+.container p {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 65%;
+    text-align: center;
+    color: white;
+    font-weight: 800;
+    font-size: 20px;
+    -webkit-text-stroke: 1px black;
+    margin-top: -25px;
+}
+
+.container .segundo {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 85%;
+    text-align: center;
+    color: white;
+    font-weight: 800;
+    font-size: 20px;
+    -webkit-text-stroke: 1px black;
+}
+
+
+.container img {
+    width: 100%;
+    border-radius: 50px;
+    box-shadow: 0 22px 20px rgba(62, 128, 125, 0.5);
+}
+
+@media (min-width: 800px) {
+    .container img{
+        width: 75%;
+    }
+  }
+@media (min-width: 700px) {
+    .cont-img{
+        margin-left: 300px !important;
+    }
+     .cont-img2{
+        margin-right: 300px !important;
+    }
+  }
+
+  /* Video */
+  .video-iframe {
+        width: 100vw; /* Ancho igual al ancho de la ventana del navegador */
+        height: 100vh; /* Altura igual a la altura de la ventana del navegador */
+        border: none; /* Elimina el borde del iframe */
+    }
+
+.video-container {
+  margin: 0;
+}
+
+.video-container ul {
+  padding: 0;
+}
+.custom-video {
+  width: 100%;
+}
+.custom-video::-webkit-media-controls-play-button {
+  background-color: rgba(0, 0, 0, 0.3);
+  color: #000;
+}
+
+.custom-video::-webkit-media-controls-seek-back-button,
+.custom-video::-webkit-media-controls-seek-forward-button {
+  background-color: rgba(0, 0, 0, 0.3);
+  color: #000;
+}
+
+.custom-video::-webkit-media-controls-volume-slider {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.custom-video::-webkit-media-controls-mute-button {
+  background-color: rgba(0, 0, 0, 0.3);
+  color: #000;
+}
+
+video {
+  border-bottom: 1px solid #10c716;
+}
+
+</style>
+
+<!-- Menu arriba -->
+<div class="oval-line">
+    <div>
+        <a href="">
+            <img src="./perfil/<%- fotoPerfil %>" alt="" style="width: 50px; border-radius: 50%; margin-top:45px; margin-left: 20px;">
+        </a>
+    </div>
+
+    <div class="text-center" style="margin-top: -70px;">
+        <span style="font-weight: 800; font-size: 20px;">Plan</span>
+    </div>
+    
+    <div style="width: 100%; margin-top: 50px;">
+        <div style="display: flex; justify-content: space-between;">
+            <a href="#">
+                <img class="cont-img" src="https://img.icons8.com/?size=512&id=2287GodioQ7D&format=png" alt="" style="width: 30px; margin-left: 70px;">
+            </a>
+        
+            <a href="#">
+                <img class="cont-img2" src="https://img.icons8.com/?size=512&id=Q4SSPv6y2vU9&format=png" alt="" style="width: 30px; margin-right: 70px;">
+            </a>
+        </div>
+    </div>
+
+        <!-- Boton volver -->
+        <div style="width: 100%; margin-top: 40px;">
+            <div style="display: flex; justify-content: space-between;">
+                <a href="/planes" style="text-decoration: none; font-weight: 800; font-size: 25px;">
+                    <img class="cont-img" src="https://img.icons8.com/?size=512&id=9045&format=png" alt="" style="width: 30px;margin-top: -12px;; margin-left: 10px;">
+                    Volver
+                </a>
+            </div>
+        </div>
+
+</div>
+
+<!-- Card -->
+<h2 class="text-center mt-5" style="font-weight: 800;  color: rgb(18, 239, 18); font-weight: 800;">Transforma tu cuerpo y alcanza tu mejor versión.</h2>
+
+<div class="video-container">
+<!-- Videos de intro -->
+  <% if (introGym && introGym.length > 0) { %>
+    <ul>
+      <% introGym.forEach(video => { %>
+        <li style="margin-top: 70px; text-align: center;">
+          <!-- Titulos-->
+            <% if (video) { %>
+                <h1 class="text-center" style="font-weight: 800; color: rgb(18, 239, 18);"><%= video.name %></h1>
+
+                <!-- Videos -->
+                <video controls class="custom-video" poster="./logo/blanco.png" style="border-radius: 12px;">
+                  <source src="<%= video.path %>" type="video/mp4">
+                  Tu navegador no admite la reproducción de videos.
+                </video>
+                <p class="m-auto p-5" style="font-size: 26px; font-weight: 600;"><%= video.description %></p>
+
+                <img src="./img-tablas/esfuerzo.jpg" alt="" style="width: 90%; border-radius: 18px;">
+            </li>
+            <% } %>
+          
+      <% }); %>
+    </ul>
+  <% } %>
+
+<!-- Videos de plan -->
+
+    <% if (videos && videos.length > 0) { %>
+        <ul>
+          <% videos.forEach(video => { %>
+            <li style="margin-top: 70px; text-align: center;">
+              <!-- Titulos-->
+              <% titulos.forEach(titulo => { %>
+                <% if (video === titulo.video) { %>
+                    <h1 class="text-center" style="font-weight: 800; color: rgb(18, 239, 18);"><%= titulo.titulo %></h1>
+                <% if (id == 1002) { %>
+
+                    <p class="text-center" style="font-weight: 800; color: rgb(18, 239, 18);"><%= titulo.descripcion %></p>
+                <% } %>
+
+
+
+                <% } %>
+              <% }); %>
+              <!-- Videos -->
+                <video controls class="custom-video" poster="./logo/blanco.png" style="border-radius: 12px;">
+                    <source src="./videos/<%= carpeta %><%= video %>" type="video/mp4">
+                    Tu navegador no admite la reproducción de videos.
+                  </video>
+
+                
+                <% if (id == 1001) { %>
+                  <img src="./img-tablas/HIIT/hiit-1.jpg" alt="" style="width: 90%; border-radius: 18px;">
+                  <img src="./img-tablas/HIIT/hiit-2.jpg" class="mt-3" alt="" style="width: 90%; border-radius: 18px;">
+
+                <% }else if(id == 1003){ %>
+                  <img src="./img-tablas/abdomen/abdomen-1.jpg" alt="" style="width: 90%; border-radius: 18px;">
+                  <img src="./img-tablas/abdomen/abdomen-2.jpg" class="mt-3" alt="" style="width: 90%; border-radius: 18px;">
+
+                <% }else if(id == 1002){ %>
+
+                  <% if(video.dias > 7 && video.dias <= 14){ %>
+
+                    <% if (video == '9.mp4' || video == '12.mp4' || video == '16.mp4' || video == '11.mp4' || video == '19.mp4' || video == '3.mp4' || video == '2.mp4' || video == '1.mp4' || video == '17.mp4' ) { %>
+                      <img src="./img-tablas/hombre/s-2-dia-1.jpg" class="mt-3" alt="" style="width: 90%; border-radius: 18px;">
+                    <% } %>
+
+                    <% if (video == '9.mp4' || video == '11.mp4' || video == '8.mp4' || video == '13.mp4' || video == '3.mp4' || video == '10.mp4' || video == '5.mp4') { %>
+                      <img src="./img-tablas/hombre/s-2-dia-2.jpg" class="mt-3" alt="" style="width: 90%; border-radius: 18px;">
+                    <% } %>
+
+                    <% if (video == '6.mp4' || video == '15.mp4' || video == '3.mp4' || video == '11.mp4' || video == '19.mp4' || video == '2.mp4' || video == '1.mp4' || video == '17.mp4') { %>
+                      <img src="./img-tablas/hombre/s-2-dia-3.jpg" class="mt-3" alt="" style="width: 90%; border-radius: 18px;">
+                    <% } %> 
+
+                  <% }else if(video.dias > 14 && video.dias <= 21){ %>
+
+                    <% if (video == '16.mp4' || video == '9.mp4' || video == '12.mp4' || video == '11.mp4' || video == '3.mp4' || video == '2.mp4' || video == '1.mp4' || video == '17.mp4' || video == '19.mp4' ) { %>
+                     <img src="./img-tablas/hombre/s-3-dia-1.jpg" class="mt-3" alt="" style="width: 90%; border-radius: 18px;">
+                    <% } %> 
+
+                    <% if (video == '9.mp4' || video == '14.mp4' || video == '11.mp4' || video == '8.mp4' || video == '3.mp4' || video == '10.mp4' || video == '5.mp4' || video == '13.mp4' ) { %>
+                   <img src="./img-tablas/hombre/s-3-dia-2.jpg" class="mt-3" alt="" style="width: 90%; border-radius: 18px;">
+                    <% } %> 
+
+                    <% if (video == '6.mp4' || video == '15.mp4' || video == '3.mp4' || video == '11.mp4' || video == '3.mp4' || video == '2.mp4' || video == '1.mp4' || video == '17.mp4' || video == '19.mp4' ) { %>
+                     <img src="./img-tablas/hombre/s-3-dia-3.jpg" class="mt-3" alt="" style="width: 90%; border-radius: 18px;">
+                   <% } %> 
+                      
+                  <% }else if(video.dias > 21  && video.dias <= 28){ %>
+                    <% if (video == '6.mp4' || video == '9.mp4' || video == '16.mp4' || video == '12.mp4' || video == '11.mp4' || video == '3.mp4' || video == '2.mp4' || video == '1.mp4' || video == '17.mp4' || video == '19.mp4') { %>
+                     <img src="./img-tablas/hombre/s-4-dia-1.jpg" class="mt-3" alt="" style="width: 90%; border-radius: 18px;">
+                    <% } %> 
+
+                    <% if (video == '9.mp4' || video == '14.mp4' || video == '11.mp4' || video == '8.mp4' || video == '3.mp4' || video == '10.mp4' || video == '5.mp4' || video == '13.mp4') { %>
+                    <img src="./img-tablas/hombre/s-4-dia-2.jpg" class="mt-3" alt="" style="width: 90%; border-radius: 18px;">
+                    <% } %>
+
+                    <% if (video == '6.mp4' || video == '15.mp4' || video == '3.mp4' || video == '11.mp4' || video == '19.mp4' || video == '3.mp4' || video == '2.mp4' || video == '1.mp4' || video == '17.mp4' || video == '18.mp4' ) { %>
+                      <img src="./img-tablas/hombre/s-4-dia-3.jpg" class="mt-3" alt="" style="width: 90%; border-radius: 18px;">
+                    <% } %>
+                      
+                  <% }else if(video.dias > 28  && video.dias <= 35){ %>
+
+                    <% if (video == '1.mp4' || video == '16.mp4' || video == '12.mp4' || video == '11.mp4' || video == '19.mp4' || video == '3.mp4' || video == '2.mp4' || video == '1.mp4' || video == '16.mp4' || video == '12.mp4' || video == '11.mp4' || video == '19.mp4' || video == '3.mp4' || video == '5.mp4' ) { %>
+                      <img src="./img-tablas/hombre/s-5-dia-1.jpg" class="mt-3" alt="" style="width: 90%; border-radius: 18px;">
+                    <% } %>
+
+                    <% if (video == '9.mp4' || video == '14.mp4' || video == '11.mp4' || video == '8.mp4' || video == '3.mp4' || video == '10.mp4' || video == '5.mp4'  || video == '13.mp4') { %>
+                      <img src="./img-tablas/hombre/s-5-dia-2.jpg" class="mt-3" alt="" style="width: 90%; border-radius: 18px;">
+                    <% } %>
+
+                    <% if (video == '6.mp4' || video == '15.mp4' || video == '3.mp4' || video == '11.mp4' || video == '19.mp4' || video == '2.mp4' || video == '1.mp4' || video == '17.mp4'  || video == '18.mp4') { %>
+                      <img src="./img-tablas/hombre/s-5-dia-3.jpg" class="mt-3" alt="" style="width: 90%; border-radius: 18px;">
+                    <% } %>
+
+                  <% }else if(video.dias > 35 && video.dias <= 42){ %>
+
+                    <% if (video == '16.mp4' || video == '9.mp4' || video == '12.mp4' || video == '11.mp4' || video == '19.mp4' || video == '3.mp4' || video == '2.mp4' || video == '1.mp4' || video == '17.mp4' || video == '18.mp4'  ) { %>
+                      <img src="./img-tablas/hombre/s-6-dia-1.jpg" class="mt-3" alt="" style="width: 90%; border-radius: 18px;">
+                    <% } %>
+
+                    <% if (video == '9.mp4' || video == '14.mp4' || video == '11.mp4' || video == '3.mp4' || video == '10.mp4' || video == '5.mp4'  || video == '13.mp4' ) { %>
+                      <img src="./img-tablas/hombre/s-6-dia-2.jpg" class="mt-3" alt="" style="width: 90%; border-radius: 18px;">
+                    <% } %>
+
+                    <% if (video == '6.mp4' || video == '15.mp4' || video == '3.mp4' || video == '11.mp4' || video == '19.mp4' || video == '2.mp4' || video == '1.mp4' || video == '17.mp4'  || video == '18.mp4' ) { %>
+                      <img src="./img-tablas/hombre/s-6-dia-3.jpg" class="mt-3" alt="" style="width: 90%; border-radius: 18px;">
+                    <% } %>
+
+                  <% }else{ %>
+
+                    <% if (video == '9.mp4' || video == '12.mp4' || video == '16.mp4' || video == '11.mp4' || video == '1.mp4' || video == '2.mp4' || video == '3.mp4' || video == '17.mp4' || video == '19.mp4') { %>
+                      <img src="./img-tablas/hombre/s-1-dia-1.jpg" class="mt-3" alt="" style="width: 90%; border-radius: 18px;">
+                    <% } %>
+
+                    <% if (video == '3.mp4' || video == '5.mp4' || video == '8.mp4' || video == '9.mp4' || video == '10.mp4' || video == '11.mp4' || video == '14.mp4' || video == '13.mp4' ) { %>
+                      <img src="./img-tablas/hombre/s-1-dia-2.jpg" class="mt-3" alt="" style="width: 90%; border-radius: 18px;">
+                    <% } %>
+
+                    <% if (video == '1.mp4'  || video == '3.mp4' || video == '6.mp4' || video == '11.mp4' || video == '15.mp4' || video == '17.mp4'  || video == '18.mp4' || video == '19.mp4'  || video == '2.mp4' ) { %>
+                      <img src="./img-tablas/hombre/s-1-dia-3.jpg" class="mt-3" alt="" style="width: 90%; border-radius: 18px;">
+                    <% } %>
+
+                  <% } %>
+
+                <% }else if(id == 1004){ %>
+                    <% if(video.dias > 7 && video.dias <= 14){ %>
+
+                      <% if (video == '16.mp4' || video == '12.mp4' || video == '3.mp4' || video == '7.mp4' || video == '4.mp4' || video == '2.mp4' || video == '1.mp4' || video == '17.mp4') { %>
+                        <!--tabla dice remo hay dos remos ...-->
+                        <img src="./img-tablas/mujer/s2d1.jpg" class="mt-3" alt="" style="width: 90%; border-radius: 18px;">
+                      <% } %>
+
+                      <% if (video == '9.mp4' || video == '14.mp4' || video == '11.mp4' || video == '8.mp4' || video == '18.mp4' || video == '15.mp4' || video == '13.mp4' || video == '3.mp4' || video == '10.mp4' || video == '5.mp4') { %>
+                        <img src="./img-tablas/mujer/s2d2.jpg" class="mt-3" alt="" style="width: 90%; border-radius: 18px;">
+                      <% } %>
+
+                      <% if (video == '6.mp4' || video == '15.mp4' || video == '3.mp4' || video == '7.mp4' || video == '16.mp4' || video == '12.mp4' || video == '11.mp4') { %>
+                        <img src="./img-tablas/mujer/s2d3.jpg" class="mt-3" alt="" style="width: 90%; border-radius: 18px;">
+                      <% } %>
+
+                    <% } else if(video.dias > 14 && video.dias <= 21){ %>
+
+                      <% if (video == '16.mp4' || video == '12.mp4' || video == '3.mp4' || video == '7.mp4' || video == '4.mp4' || video == '2.mp4' || video == '1.mp4' || video == '17.mp4') { %>
+                        <!--dice remo y hay dos remos-->
+                        <img src="./img-tablas/mujer/s3d1.jpg" class="mt-3" alt="" style="width: 90%; border-radius: 18px;">
+                      <% } %>
+
+                      <% if (video == '9.mp4'  || video == '14.mp4' || video == '11.mp4' || video == '8.mp4' || video == '18.mp4' || video == '15.mp4' || video == '13.mp4' || video == '3.mp4' || video == '10.mp4' || video == '5.mp4') { %>
+                        <img src="./img-tablas/mujer/s3d2.jpg" class="mt-3" alt="" style="width: 90%; border-radius: 18px;">
+                      <% } %>
+
+                      <% if (video == '6.mp4' || video == '15.mp4' || video == '3.mp4' || video == '7.mp4' || video == '16.mp4' || video == '12.mp4' || video == '11.mp4') { %>
+                        <img src="./img-tablas/mujer/s3d3.jpg" class="mt-3" alt="" style="width: 90%; border-radius: 18px;">
+                      <% } %>
+                      
+                    <% } else if(video.dias > 21 && video.dias <= 28){ %>
+
+                      <% if (video == '9.mp4' || video == '12.mp4' || video == '3.mp4' || video == '7.mp4' || video == '4.mp4' || video == '2.mp4' || video == '1.mp4' || video == '17.mp4') { %>
+                        <!--Remo esta dos veces-->
+                        <img src="./img-tablas/mujer/s4d1.jpg" class="mt-3" alt="" style="width: 90%; border-radius: 18px;">
+                      <% } %>
+
+                      <% if (video == '9.mp4' || video == '14.mp4' || video == '11.mp4' || video == '8.mp4' || video == '18.mp4' || video == '15.mp4' || video == '13.mp4' || video == '15.mp4' || video == '3.mp4' || video == '10.mp4' || video == '5.mp4') { %>
+                        <img src="./img-tablas/mujer/s4d2.jpg" class="mt-3" alt="" style="width: 90%; border-radius: 18px;">
+                      <% } %>
+
+                      <% if (video == '6.mp4' || video == '15.mp4' || video == '3.mp4' || video == '7.mp4' || video == '12.mp4' || video == '16.mp4' || video == '11.mp4') { %>
+                        <img src="./img-tablas/mujer/s4d3.jpg" class="mt-3" alt="" style="width: 90%; border-radius: 18px;">
+                      <% } %>
+                      
+                    <% } else if(video.dias > 28 && video.dias <= 35){ %>
+
+                      <% if (video == '16.mp4' || video == '12.mp4' || video == '3.mp4' || video == '7.mp4' || video == '4.mp4' || video == '2.mp4' || video == '1.mp4' || video == '17.mp4') { %>
+                        <!--Remo hay dos-->
+                        <img src="./img-tablas/mujer/s5d1.jpg" class="mt-3" alt="" style="width: 90%; border-radius: 18px;">
+                      <% } %>
+
+                      <% if (video == '9.mp4' || video == '14.mp4' || video == '11.mp4' || video == '8.mp4' || video == '18.mp4' || video == '15.mp4' || video == '13.mp4' || video == '3.mp4' || video == '10.mp4' || video == '5.mp4') { %>
+                        <img src="./img-tablas/mujer/s5d2.jpg" class="mt-3" alt="" style="width: 90%; border-radius: 18px;">
+                      <% } %>
+
+                      <% if (video == '6.mp4' || video == '15.mp4' || video == '3.mp4' || video == '7.mp4' || video == '16.mp4' || video == '12.mp4' || video == '11.mp4') { %>
+                        <img src="./img-tablas/mujer/s5d3.jpg" class="mt-3" alt="" style="width: 90%; border-radius: 18px;">
+                      <% } %>
+
+                    <% } else if(video.dias > 35 && video.dias <= 42){ %>
+
+                      <% if (video == '16.mp4' || video == '12.mp4' || video == '3.mp4' || video == '7.mp4' || video == '4.mp4' || video == '2.mp4' || video == '1.mp4' || video == '17.mp4') { %>
+                        <!--Remo-->
+                        <img src="./img-tablas/mujer/s6d1.jpg" class="mt-3" alt="" style="width: 90%; border-radius: 18px;">
+                      <% } %>
+
+                      <% if (video == '9.mp4' || video == '14.mp4' || video == '11.mp4' || video == '8.mp4' || video == '18.mp4' || video == '15.mp4' || video == '13.mp4' || video == '3.mp4' || video == '5.mp4' || video == '10.mp4') { %>
+                        <img src="./img-tablas/mujer/s6d2.jpg" class="mt-3" alt="" style="width: 90%; border-radius: 18px;">
+                      <% } %>
+
+                      <% if (video == '6.mp4' || video == '15.mp4' || video == '3.mp4' || video == '7.mp4' || video == '16.mp4' || video == '12.mp4' || video == '11.mp4') { %>
+                        <img src="./img-tablas/mujer/s6d3.jpg" class="mt-3" alt="" style="width: 90%; border-radius: 18px;">
+                      <% } %>
+                    
+                    <% } else{ %>
+
+                      <% if (video == '16.mp4' || video == '12.mp4' || video == '3.mp4' || video == '7.mp4' || video == '4.mp4' || video == '2.mp4' || video == '1.mp4' || video == '1.mp4') { %>
+                        <!--tabla dice remo y hay dos videos llamados remo ...-->
+                        <img src="./img-tablas/mujer/s1d1.jpg" class="mt-3" alt="" style="width: 90%; border-radius: 18px;">
+                      <% } %>
+
+                      <% if (video == '9.mp4' || video == '14.mp4' || video == '11.mp4' || video == '8.mp4' || video == '18.mp4' || video == '15.mp4' || video == '13.mp4'  || video == '3.mp4' || video == '10.mp4'  || video == '5.mp4') { %>
+                        <img src="./img-tablas/mujer/s1d2.jpg" class="mt-3" alt="" style="width: 90%; border-radius: 18px;">
+                      <% } %>
+                    
+                      <% if (video == '6.mp4' || video == '15.mp4' || video == '3.mp4' || video == '7.mp4' || video == '16.mp4' || video == '12.mp4' || video == '11.mp4') { %>
+                        <img src="./img-tablas/mujer/s1d3.jpg" class="mt-3" alt="" style="width: 90%; border-radius: 18px;">
+                      <% } %>
+                    <% } %>
+
+
+                <img src="./img-tablas/esfuerzo.jpg" class="mt-3" alt="" style="width: 90%; border-radius: 18px;">
+              </li>
+              <% } %>
+
+          <% }); %>
+        </ul>
+      <% } else { %>
+        <p>No se encontraron videos.</p>
+      <% } %>
+</div>
+  
+<!-- Menu de abajo -->
+ <div style="position: fixed; bottom: 50px; width: 100%; height: 50px;">
+    <div style="display: flex; justify-content: space-between;">
+      <a href="/">
+        <img src="https://img.icons8.com/?size=512&id=BE56i0LQZMIW&format=png" alt="" style="width: 40px; margin-left: 45px;">
+      </a>
+  
+      <a href="ajustes">
+        <img src="https://img.icons8.com/?size=512&id=53420&format=png" alt="" style="width: 40px; margin-right: 45px;">
+      </a>
+    </div>
+  </div>
+  
+<%- include ("./partials/pie") %> 

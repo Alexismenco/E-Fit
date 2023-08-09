@@ -1,0 +1,95 @@
+<%- include ("./partials/cabecera") %> 
+
+<style>
+  @media (max-width: 600px) {
+    .contenedor{
+      width: 80%;
+      height: 100%;
+    }
+  }
+
+  .oval-line {
+    width: 100%;
+    height: 150px;
+    border-bottom-left-radius: 40%;
+    border-bottom-right-radius: 40%;
+    background-color: rgb(18, 239, 18);
+    border-bottom: 2px solid #000;
+  }
+  hr {
+    border-top: 2px solid rgb(108, 104, 104);
+  }
+</style>
+
+  <!-- Menu arriba -->
+  <div class="oval-line">
+    <div>
+        <a href="#">
+            <img src="./perfil/<%- fotoPerfil %>" alt="" style="width: 50px; border-radius: 50%; margin-top:45px; margin-left: 20px;">
+        </a>
+    </div>
+
+    <div class="text-center" style="margin-top: -70px;">
+        <span style="font-weight: 800; font-size: 20px;">Ayuda</span>
+    </div>
+    <div class="text-center">
+      <img class="" src="./logo/icon black.png" alt="" style="width: 60px;">
+  </div>
+    
+    <div style="width: 100%; margin-top: -10px;">
+        <div style="display: flex; justify-content: space-between;">
+            <a href="#">
+                <img class="cont-img" src="https://img.icons8.com/?size=512&id=2287GodioQ7D&format=png" alt="" style="width: 30px; margin-left: 70px;">
+            </a>
+        
+            <a href="#">
+                <img class="cont-img2" src="https://img.icons8.com/?size=512&id=Q4SSPv6y2vU9&format=png" alt="" style="width: 30px; margin-right: 70px;">
+            </a>
+        </div>
+    </div>
+
+        <!-- Boton volver -->
+        <div style="width: 100%; margin-top: 40px;">
+          <div style="display: flex; justify-content: space-between;">
+              <a href="/" style="text-decoration: none; font-weight: 800; font-size: 25px;">
+                  <img class="cont-img" src="https://img.icons8.com/?size=512&id=9045&format=png" alt="" style="width: 30px;margin-top: -12px;; margin-left: 10px;">
+                  Volver
+              </a>
+          </div>
+      </div>
+
+  </div>
+
+
+  <div class="text-dark text-center">
+        <h1 class="color mt-5" style="font-weight: 800; text-align: center; font-size: 22px;">¿Tienes alguna pregunta o duda?</h1>
+        <h1 class="color" style="font-weight: 800; text-align: center; font-size: 22px;">Escribenos...</h1>
+  </div>
+
+<form  class="container contenedor col-3 text-center mt-5 " action="/enviarcontacto" method="post">
+    <input placeholder="Nombre" class="form-control mt-2 bg-dark text-info" type="text" name="nombre" required>
+    <br>
+    <input placeholder="Correo electronico" class="form-control bg-dark text-info " type="text" value="<%= email %>" name="correo" required hidden>
+    <br>
+    <textarea placeholder="Escribenos..." class="form-control  bg-dark text-info"  name="comentario" cols="30" rows="10" required></textarea>
+    <br>
+    <button class="w-100 mt-2 btn btn-lg" type="submit" style="background-color: rgb(18, 239, 18); border-radius: 20px 20px 20px 20px;">Enviar</button>
+
+</form>
+
+  
+<!-- Menu de abajo -->
+<div style="position: fixed; bottom: 50px; width: 100%; height: 50px;">
+  <div style="display: flex; justify-content: space-between;">
+    <a href="/">
+      <img src="https://img.icons8.com/?size=512&id=BE56i0LQZMIW&format=png" alt="" style="width: 40px; margin-left: 45px;">
+    </a>
+
+    <a href="ajustes">
+      <img src="https://img.icons8.com/?size=512&id=53420&format=png" alt="" style="width: 40px; margin-right: 45px;">
+    </a>
+  </div>
+</div>
+
+
+<%- include ("./partials/pie") %> 

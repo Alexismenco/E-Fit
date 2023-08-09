@@ -1,0 +1,113 @@
+<%- include ("./partials/cabecera") %> 
+
+<style>
+  .oval-line {
+    width: 100%;
+    height: 150px;
+    border-bottom-left-radius: 40%;
+    border-bottom-right-radius: 40%;
+    background-color: rgb(18, 239, 18);
+    border-bottom: 2px solid #000;
+
+  }
+  hr {
+    border-top: 2px solid rgb(108, 104, 104);
+  }
+
+  #input-1::placeholder, #input-2::placeholder  {
+  color: #fff;
+  text-align: center;
+}
+
+   
+</style>
+
+  <!-- Menu arriba -->
+  <div class="oval-line">
+    <div>
+        <a href="#">
+            <img src="<%- fotoPerfil %>" alt="" style="width: 50px; border-radius: 50%; margin-top:45px; margin-left: 20px;">
+        </a>
+    </div>
+
+    <div class="text-center" style="margin-top: -70px;">
+        <span style="font-weight: 800; font-size: 20px;">Dirección</span>
+    </div>
+    
+    <div style="width: 100%; margin-top: 50px;">
+        <div style="display: flex; justify-content: space-between;">
+            <a href="#">
+                <img class="cont-img" src="https://img.icons8.com/?size=512&id=2287GodioQ7D&format=png" alt="" style="width: 30px; margin-left: 70px;">
+            </a>
+        
+            <a href="#">
+                <img class="cont-img2" src="https://img.icons8.com/?size=512&id=Q4SSPv6y2vU9&format=png" alt="" style="width: 30px; margin-right: 70px;">
+            </a>
+        </div>
+    </div>
+
+
+    <!-- Boton volver -->
+    <div style="width: 100%; margin-top: 55px;">
+      <div style="display: flex; justify-content: space-between;">
+          <a href="/ajustes" style="text-decoration: none; font-weight: 800; font-size: 25px;">
+              <img class="cont-img" src="https://img.icons8.com/?size=512&id=9045&format=png" alt="" style="width: 30px;margin-top: -12px;; margin-left: 10px;">
+              Volver
+          </a>
+      </div>
+  </div>
+
+</div>
+
+
+  <div class="text-center mt-4">
+    <img class="m-auto" src="https://img.icons8.com/?size=512&id=52234&format=png" alt="" style="width: 40px; border-radius: 50%;">
+    <br>
+  </div>
+  <hr>
+  
+  <form class="text-center" action="/direccion" method="post">
+    <h3 class="text-dark" style="display: inline-flex;">
+      <img src="https://img.icons8.com/?size=512&id=36192&format=png"style="width: 40px;" />
+      <span style="margin-left: 10px; font-weight: 600;">Modificar dirección</span></h3>
+
+      <p class="text-dark" style="font-weight: 800;">Nombre actual: <%= direccion.Recibe==null?'No hay Nombre':direccion.Recibe %></p>
+      <p class="text-dark" style="font-weight: 800;">Region actual: <%= direccion.Region==null?'No hay región':direccion.Region %></p>
+      <p class="text-dark" style="font-weight: 800;">Comuna actual: <%= direccion.Comuna==null?'No hay comuna':direccion.Comuna %></p>
+      <p class="text-dark" style="font-weight: 800;">Dirección actual: <%= direccion.Direccion==null?'No hay dirección':direccion.Direccion %></p>
+    <div class="form-floating mt-5">
+        <input id="input-1" type="text" name="nombre" class="form-control email" placeholder="Nombre, ¿Quien recibe?" style="border-radius: 20px 20px 20px 20px; border: 2px solid rgb(18, 239, 18); background-color: black; color: white; opacity: 0.8;" required>
+    </div>
+
+    <div class="form-floating mt-2">
+        <input id="input-1" type="text" name="region" class="form-control email" placeholder="Región" style="border-radius: 20px 20px 20px 20px; border: 2px solid rgb(18, 239, 18); background-color: black; color: white; opacity: 0.8;" required>
+    </div>
+
+    <div class="form-floating mt-2">
+        <input id="input-1" type="text" name="comuna" class="form-control email" placeholder="Comuna" style="border-radius: 20px 20px 20px 20px; border: 2px solid rgb(18, 239, 18); background-color: black; color: white; opacity: 0.8;" required>
+    </div>
+
+    <div class="form-floating mt-2">
+        <input id="input-1" type="text" name="direccion" class="form-control email" placeholder="Calle y Número" style="border-radius: 20px 20px 20px 20px; border: 2px solid rgb(18, 239, 18); background-color: black; color: white; opacity: 0.8;" required>
+    </div>
+
+    <button class="w-100 mt-5 btn btn-lg mb-5" type="submit" style="background-color: rgb(18, 239, 18); border-radius: 20px 20px 20px 20px;">Guardar</button>
+
+  </form>
+  <hr>
+
+    <!-- Menu de abajo -->
+    <div style="position: fixed; bottom: 50px; width: 100%; height: 50px;">
+      <div style="display: flex; justify-content: space-between;">
+        <a href="/">
+          <img src="https://img.icons8.com/?size=512&id=BE56i0LQZMIW&format=png" alt="" style="width: 40px; margin-left: 45px;">
+        </a>
+    
+        <a href="/ajustes">
+          <img src="https://img.icons8.com/?size=512&id=53420&format=png" alt="" style="width: 40px; margin-right: 45px;">
+        </a>
+      </div>
+    </div>
+
+
+<%- include ("./partials/pie") %> 

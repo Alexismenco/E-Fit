@@ -1,0 +1,41 @@
+<%- include ("./partials/cabecera") %>
+<style>
+@media (max-width: 1700px) {
+    .formulario{
+      width: 40%;
+    }
+}
+    
+  @media (max-width: 600px) {
+    .formulario{
+      width: 100%;
+      height: 100%;
+    }
+  }
+  </style>
+<div class="text-center mt-5 mb-5">
+
+    <form class="container formulario col-3 mt-5" action="/restoreCode" method="post">
+        <div class="text-center m-auto">
+          <img src="./logo/blanco.png" alt="" style="width: 200px; margin-top: 150px;">
+        </div>
+
+        <h1 class="h3 mt-5 mb-3" style="font-weight: 700;">Ingresa el codigo enviado al correo</h1>
+    
+        <div class="form-floating text-white mt-5">
+            <input type="text" name="email" value="<%=correo%>" hidden>
+          <input type="number" name="codigo" class="w-100 mt-5 btn btn-lg text-white" placeholder="Ingresa el codigo" style=" border: 2px solid rgb(18, 239, 18); background-color: black; opacity: 0.7; color: white;" required>
+        </div>
+    
+        <%- mensaje==true?'<p class="mt-3 text-danger"> Error codigo incorrecto</p>':''%> 
+        <button class="w-100 mt-5 btn btn-lg text-white" type="submit" style="background-color: rgb(9, 11, 9); border-radius: 20px 20px 20px 20px; border: 2px solid rgb(18, 239, 18); opacity: 0.8;">Restaurar</button>
+       
+      </form>
+      <br>
+      <a href="/login" class="mt-4 text-white" style="text-decoration: none; font-weight: 800;">Iniciar sesión</a>
+      <br>
+      <a href="/register" class="mt-4 text-white" style="text-decoration: none; font-weight: 700;">Registrarse</a>
+
+
+    </div>
+<%- include ("./partials/pie") %> 

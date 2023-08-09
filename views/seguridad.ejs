@@ -1,0 +1,113 @@
+<%- include ("./partials/cabecera") %> 
+
+<style>
+  .oval-line {
+    width: 100%;
+    height: 150px;
+    border-bottom-left-radius: 40%;
+    border-bottom-right-radius: 40%;
+    background-color: rgb(18, 239, 18);
+    border-bottom: 2px solid #000;
+
+  }
+  hr {
+    border-top: 2px solid rgb(108, 104, 104);
+  }
+
+</style>
+
+  <!-- Menu arriba -->
+  <div class="oval-line">
+    <div>
+        <a href="#">
+            <img src="./perfil/<%- fotoPerfil %>" alt="" style="width: 50px; border-radius: 50%; margin-top:45px; margin-left: 20px;">
+        </a>
+    </div>
+
+    <div class="text-center" style="margin-top: -70px;">
+        <span style="font-weight: 800; font-size: 20px;">Seguridad</span>
+    </div>
+    
+    <div style="width: 100%; margin-top: 50px;">
+        <div style="display: flex; justify-content: space-between;">
+            <a href="#">
+                <img class="cont-img" src="https://img.icons8.com/?size=512&id=2287GodioQ7D&format=png" alt="" style="width: 30px; margin-left: 70px;">
+            </a>
+        
+            <a href="#">
+                <img class="cont-img2" src="https://img.icons8.com/?size=512&id=Q4SSPv6y2vU9&format=png" alt="" style="width: 30px; margin-right: 70px;">
+            </a>
+        </div>
+    </div>
+
+
+    <!-- Boton volver -->
+    <div style="width: 100%; margin-top: 55px;">
+      <div style="display: flex; justify-content: space-between;">
+          <a href="/ajustes" style="text-decoration: none; font-weight: 800; font-size: 25px;">
+              <img class="cont-img" src="https://img.icons8.com/?size=512&id=9045&format=png" alt="" style="width: 30px;margin-top: -12px;; margin-left: 10px;">
+              Volver
+          </a>
+      </div>
+  </div>
+
+</div>
+
+  <div class="text-center mt-4">
+    <img class="m-auto" src="https://img.icons8.com/?size=512&id=wYZphVpCWsq5&format=png" alt="" style="width: 40px; border-radius: 50%;">
+    <br>
+  </div>
+  <hr>
+  
+      <form class="text-center mt-5" action="/perfil" method="post">
+        <h3 class="text-dark" style="display: inline-flex;">
+          <img src="https://img.icons8.com/?size=512&id=26135&format=png" alt=""style="width: 40px;" />
+          <span class="mt-2" style="margin-left: 10px; font-weight: 600;">Cambiar email</span>
+        </h3>
+        
+        <div class="form-group row w-50 m-auto">
+            <span class="text-dark" style="font-weight: 600;">Email actual <%- email %></span>
+            <input type="email" class=" m-auto text-dark form-control" id="email" placeholder="Email"  name="email" required>
+        </div>
+        <div class="form-group">
+            <button class="w-75 mt-4 btn btn-lg" type="submit" style="background-color: rgb(18, 239, 18); border-radius: 20px 20px 20px 20px;">Actualizar email</button>
+        </div>
+      </form>
+  <hr>
+
+  <form class="text-center mt-5" action="/perfil" method="post">
+    <h3 class="text-dark" style="display: inline-flex;">
+      <img src="https://img.icons8.com/?size=512&id=gFWjWi4zc3pK&format=png" alt=""style="width: 40px;" />
+      <span class="mt-2" style="margin-left: 10px; font-weight: 600;">Cambiar contraseña</span>
+    </h3>
+    <div class="form-group row w-50 m-auto">
+        <span class="text-dark">Contraseña actual</span>
+        <input type="password" class=" m-auto text-dark form-control" id="pasworda" placeholder="********"  name="passworda" required>
+
+      <label for="passwordn" class="text-dark">Ingresa tu nueva contraseña</label>
+        <input type="password" class=" m-auto text-dark form-control" id="paswordn" placeholder="********"  name="passwordn" required>
+
+        <label for="passwordn" class="text-dark">Repite tu nueva contraseña</label>
+        <input type="password" class=" m-auto text-dark form-control" id="paswordn" placeholder="********"  name="passwordn2">
+    </div>
+    <div class="form-group">
+        <button class="w-75 mt-4 btn btn-lg" type="submit" style="background-color: rgb(18, 239, 18); border-radius: 20px 20px 20px 20px;">Cambiar contraseña</button>
+    </div>
+  </form>
+  <hr>
+
+    <!-- Menu de abajo -->
+    <div style="position: fixed; bottom: 50px; width: 100%; height: 50px;">
+      <div style="display: flex; justify-content: space-between;">
+        <a href="/">
+          <img src="https://img.icons8.com/?size=512&id=BE56i0LQZMIW&format=png" alt="" style="width: 40px; margin-left: 45px;">
+        </a>
+    
+        <a href="/ajustes">
+          <img src="https://img.icons8.com/?size=512&id=53420&format=png" alt="" style="width: 40px; margin-right: 45px;">
+        </a>
+      </div>
+    </div>
+
+
+<%- include ("./partials/pie") %> 

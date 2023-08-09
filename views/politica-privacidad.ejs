@@ -1,0 +1,325 @@
+<%- include ("./partials/cabecera") %> 
+
+<style>
+.oval-line {
+  width: 100%;
+  height: 150px;
+  border-bottom-left-radius: 40%;
+  border-bottom-right-radius: 40%;
+  background-color: rgb(18, 239, 18);
+  border-bottom: 2px solid #000;
+
+}
+
+.container {
+    position: relative;
+    display: inline-block;
+    margin-top: 50px;
+    width: 145px;
+}
+
+.container span {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 85%;
+    text-align: center;
+    color: white;
+    font-weight: 800;
+    font-size: 22px;
+}
+
+.container p {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 85%;
+    text-align: center;
+    color: white;
+    font-weight: 800;
+    font-size: 12px;
+}
+
+.container img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+    box-shadow: 0 22px 20px rgba(42, 84, 82, 0.5);
+    filter: brightness(0.5); /* Valor de brillo entre 0 y 1 */
+}
+
+@media (min-width: 800px) {
+    .container img{
+        width: 100%;
+    }
+  }
+@media (min-width: 700px) {
+    .cont-img{
+        margin-left: 300px !important;
+    }
+     .cont-img2{
+        margin-right: 300px !important;
+    }
+  }
+</style>
+
+<!-- Menu arriba -->
+<div class="oval-line">
+    <div>
+        <a href="">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNPMlucl9D07zGzdB3LtwYykQD1lVbwX75GA&usqp=CAU" alt="" style="width: 50px; border-radius: 50%; margin-top:45px; margin-left: 20px;">
+        </a>
+    </div>
+
+    <div class="text-center" style="margin-top: -70px;">
+        <span style="font-weight: 800; font-size: 20px;">Politicas y privacidad</span>
+    </div>
+    <div class="text-center">
+        <img class="" src="./logo/icon black.png" alt="" style="width: 60px;">
+    </div>
+    
+    <div style="width: 100%; margin-top: -10px;">
+        <div style="display: flex; justify-content: space-between;">
+            <a href="#">
+                <img class="cont-img" src="https://img.icons8.com/?size=512&id=2287GodioQ7D&format=png" alt="" style="width: 30px; margin-left: 70px;">
+            </a>
+        
+            <a href="#">
+                <img class="cont-img2" src="https://img.icons8.com/?size=512&id=Q4SSPv6y2vU9&format=png" alt="" style="width: 30px; margin-right: 70px;">
+            </a>
+        </div>
+    </div>
+
+</div>
+
+<div>
+    <ul class="text-center mt-4">
+        <li><a href="/login"> Inicio</a></li>
+        <li><a href="/politica-privacidad"> Política de Privacidad</a></li>
+        <li><a href="/poilitica-de-cookie"> Política de Cookies</a></li>
+        <li><a href="/aviso-legal">  Avisó Legal</a></li>
+
+    </ul>
+</div>
+
+<h3 class="text-center text-dark mt-5" style="font-weight: 800;">Politicas y privacidad</h3>
+
+<div class="text-center text-dark" style="background-color: burlywood; margin: 50px;">
+    <p style="width: 80%; margin: auto; margin-top: 50px; font-weight: 600;">
+        El Titular le informa sobre su Política de Privacidad respecto del tratamiento y protección de los datos de 
+        carácter personal de los usuarios que puedan ser recabados durante la navegación a través del Sitio Web: 
+        <span class="text-primary">
+            <a href="https://app-gym-production.up.railway.app">https://app-gym-production.up.railway.app</a>
+        </span>
+        <br><br>
+
+        En este sentido, el Titular garantiza el cumplimiento de la normativa vigente en materia de protección de datos personales, 
+        reflejada en la Ley Orgánica 3/2018, de 5 de diciembre, de Protección de Datos Personales y de Garantía de Derechos Digitales 
+        (LOPD GDD). Cumple también con el Reglamento (UE) 2016/679 del Parlamento Europeo y del Consejo de 27 de abril de 2016 relativo 
+        a la protección de las personas físicas (RGPD).
+        El uso de sitio Web implica la aceptación de esta Política de Privacidad así como las condiciones incluidas en el
+        <span class="text-primary">
+            <a href="https://app-gym-production.up.railway.app/aviso-legal">Aviso Legal</a>
+        </span> 
+    </p>
+
+<h3 class="text-center text-dark mt-5" style="font-weight: 800;">Identidad del Responsable</h3>
+    <p style="width: 80%; margin-top: 50px;">
+        <ul>
+            <li style="font-weight: 600;">Responsable:</li> Cristian.
+            <li style="font-weight: 600;">Domicilio:</li> Santiago - Chile.
+            <li style="font-weight: 600;">Correo electrónico:</li> e.fit.super@gmail.com
+            <li style="font-weight: 600;">Sitio web:</li><a href="https://app-gym-production.up.railway.app"> https://app-gym-production.up.railway.app</a>
+        </ul>
+    </p>
+</div>
+
+
+<div class="text-center text-dark" style="background-color: burlywood; margin: 50px; border-radius: 20px; padding-top: 10px;">
+
+<h3 class="text-center text-dark mt-5" style="font-weight: 800;">Principios aplicados en el tratamiento de datos</h3>
+    <p style="width: 80%; margin-top: 50px; margin: auto;">
+        En el tratamiento de sus datos personales, el Titular aplicará los siguientes principios que se ajustan a las 
+        exigencias del nuevo reglamento europeo de protección de datos (RGPD):
+        <ul class="mt-5" style="margin: 15px;">
+            <li class="mt-3" style="font-weight: 600;">Principio de licitud, lealtad y transparencia: El Titular siempre requerirá 
+                el consentimiento para el tratamiento de los datos personales que puede ser para uno o varios fines 
+                específicos sobre los que el Titular informará al Usuario previamente con absoluta transparencia.</li>
+
+            <li class="mt-3"  style="font-weight: 600;">Principio de minimización de datos: El Titular solicitará solo los datos 
+                estrictamente necesarios para el fin o los fines que los solicita.</li>
+            <li class="mt-3"  style="font-weight: 600;">Principio de limitación del plazo de conservación: El Titular mantendrá los 
+                datos personales recabados durante el tiempo estrictamente necesario para el fin o los fines del tratamiento. 
+                El Titular informará al Usuario del plazo de conservación correspondiente según la finalidad.
+                En el caso de suscripciones, el Titular revisará periódicamente las listas y eliminará aquellos registros 
+                inactivos durante un tiempo considerable.</li>
+
+            <li class="mt-3"  style="font-weight: 600;">Principio de integridad y confidencialidad: Los datos personales recabados serán 
+                tratados de tal manera que su seguridad, confidencialidad e integridad está garantizada.
+                El Titular toma las precauciones necesarias para evitar el acceso no autorizado o uso indebido de los datos 
+                de sus usuarios por parte de terceros.
+                </li>
+        </ul>
+    </p>
+
+
+    <h3 class="text-center text-dark mt-5" style="font-weight: 800;">Obtención de datos personales</h3>
+    <p style="width: 80%; margin-top: 50px; margin: auto;">
+        Para navegar por el sitio Web es necesario registrarse y proporsionar un correo electrónico, nombre y una contraseña.
+    </p>
+
+    <h3 class="text-center text-dark mt-5" style="font-weight: 800;">Derechos</h3>
+    <p style="width: 80%; margin-top: 50px; margin: auto;">
+        El Titular le informa que sobre sus datos personales tiene derecho a:
+
+        <ul class="mt-5" style="margin: 15px;">
+            <li>Solicitar el acceso a los datos almacenados.</li>
+            <li>Solicitar una rectificación o la supresión.</li>
+            <li>Solicitar la limitación de su tratamiento.</li>
+        </ul>
+
+        No puede ejercitar el derecho a la portabilidad de los datos.
+    </p>
+
+    <p style="width: 80%; margin-top: 10px; margin: auto;">
+        El ejercicio de estos derechos es personal y por tanto debe ser ejercido directamente por el interesado, solicitándolo 
+directamente al Titular, lo que significa que cualquier cliente, suscriptor o colaborador que haya facilitado sus datos 
+en algún momento, puede dirigirse al Titular y pedir información sobre los datos que tiene almacenados y cómo los ha obtenido, 
+solicitar la rectificación de los mismos, oponerse al tratamiento, limitar su uso o solicitar la supresión de esos datos en los 
+ficheros del Titular.
+    </p>
+
+    <p style="width: 80%; margin-top: 10px; margin: auto;">
+        Para ejercitar sus derechos tiene que enviar su petición junto con una fotocopia del Documento Nacional de Identidad o 
+equivalente a  la dirección de correo electrónico: info@contacto.com
+    </p>
+
+    <p style="width: 80%; margin-top: 10px; margin: auto;">
+        El ejercicio de estos derechos no incluye ningún dato que el Titular esté obligado a conservar con fines administrativos, 
+legales o de seguridad.
+    </p>
+
+    <p style="width: 80%; margin-top: 10px; margin: auto;">
+        Tiene derecho a la tutela judicial efectiva y a presentar una reclamación ante la autoridad de control, en este caso, 
+la Agencia Española de Protección de Datos, si considera que el tratamiento de datos personales que le conciernen infringe 
+el Reglamento.
+    </p>
+
+    <h3 class="text-center text-dark mt-5" style="font-weight: 800;">Finalidad del tratamiento de datos personales</h3>
+    <p style="width: 80%; margin-top: 10px; margin: auto;">
+        Cuando usted se conecta al Sitio Web esta información puede incluir datos de carácter personal como
+          pueden ser su nombre, dirección de correo electrónico, y 
+          otra información. Al facilitar esta información, da su consentimiento para que su información sea recopilada, utilizada,
+           gestionada y almacenada por — Cristian — sólo como se describe en las páginas:
+
+           <ul>
+            <li><a href="https://app-gym-production.up.railway.app/aviso-legal">Aviso legal</a></li>
+            <li><a href="https://app-gym-production.up.railway.app/politica-privacidad">Politicas de privacidad</a></li>
+           </ul>
+
+           Los datos personales y la finalidad del tratamiento por parte del Titular es diferente según el sistema de captura 
+           de información:
+            Existen otras finalidades por las que el Titular trata datos personales:
+
+            <ul>
+                <li>Para garantizar el cumplimiento de las condiciones recogidas en la página de Aviso Legal y de la ley aplicable.
+                     Esto puede incluir el desarrollo de herramientas y algoritmos que ayuden al Sitio Web a garantizar la 
+                     confidencialidad de los datos personales que recoge.</li>
+                     <li>
+                        Para apoyar y mejorar los servicios que ofrece este Sitio Web.
+                     </li>
+                     <li>
+                        Para analizar la navegación de los usuarios. El Titular recoge otros datos no identificativos que 
+                        se obtienen mediante el uso de cookies que se descargan en el ordenador del Usuario cuando navega por el 
+                        Sitio Web cuyas características y finalidad están detalladas en la página de <a href="https://app-gym-production.up.railway.app/politica-de-cookie">Política de Cookies</a>.
+
+                     </li>
+            </ul>
+        </p>
+        <h3 class="text-center text-dark mt-5" style="font-weight: 800;">Seguridad de los datos personales</h3>
+
+        <p style="width: 80%; margin: auto;">
+            Para proteger sus datos personales, el Titular toma todas las precauciones razonables y sigue las mejores prácticas de la industria para evitar su pérdida, mal uso, acceso indebido, divulgación, alteración o destrucción de los mismos.
+
+            Sus datos podrán ser incorporados a un fichero de lista de correo, del cual el Titular es responsable de su gestión y tratamiento. La seguridad de sus datos está garantizada, ya que el Titular toma todas las medidas de seguridad necesarias y le garantiza que los datos personales sólo se usarán para las finalidades dadas.
+
+            El Titular informa al Usuario de que sus datos personales no serán cedidos a terceras organizaciones, con la salvedad de que dicha cesión de datos esté amparada en una obligación legal o cuando la prestación de un servicio implique la necesidad de una relación contractual con un encargado de tratamiento. En este último caso, solo se llevará a cabo la cesión de datos al tercero cuando el Titular disponga del consentimiento expreso del Usuario.
+
+            Sin embargo, en algunos casos se pueden realizar colaboraciones con otros profesionales, en esos casos, se requerirá consentimiento al Usuario informando sobre la identidad del colaborador y la finalidad de la colaboración. Siempre se realizará con los más estrictos estándares de seguridad.
+
+
+        </p>
+
+
+        <h3 class="text-center text-dark mt-5" style="font-weight: 800;">Política de Cookies</h3>
+
+        <p style="width: 80%; margin: auto;">
+            Para que este sitio Web funcione correctamente necesita utilizar cookies, que es una información que se almacena en su navegador web.
+
+            Puede consultar toda la información relativa a la política de recogida y tratamiento de las cookies en la página de <a href="https://app-gym-production.up.railway.app/politica-de-cookie">Política de Cookies</a>.
+        </p>
+
+
+        <h3 class="text-center text-dark mt-5" style="font-weight: 800;">Legitimación para el tratamiento de datos</h3>
+
+        <p style="width: 80%; margin: auto;">
+            La base legal para el tratamiento de sus datos es:
+            <ul><li>El consentimiento del interesado.
+            </li></ul> 
+        </p>
+
+        <h3 class="text-center text-dark mt-5" style="font-weight: 800;">Categorías de datos personales</h3>
+
+        <p style="width: 80%; margin: auto;">
+            Las categorías de datos personales que trata el Titular son:
+            <ul>
+                <li>Datos identificativos.</li>
+                <li>No se tratan categorías de datos especialmente protegidos.</li>
+            </ul> 
+        </p>
+
+        <h3 class="text-center text-dark mt-5" style="font-weight: 800;">Conservación de datos personales</h3>
+
+        <p style="width: 80%; margin: auto;">
+            Los datos personales proporcionados al Titular se conservarán hasta que solicite su supresión.
+        </p>
+
+
+        <h3 class="text-center text-dark mt-5" style="font-weight: 800;">Destinatarios de datos personales</h3>
+
+        <p style="width: 80%; margin: auto;">
+            Los datos personales proporcionados al Titular se conservarán hasta que solicite su supresión.
+        </p>
+
+        <h3 class="text-center text-dark mt-5" style="font-weight: 800;">Exactitud y veracidad de los datos personales
+        </h3>
+
+        <p style="width: 80%; margin: auto;">
+            Usted se compromete a que los datos facilitados al Titular sean correctos, completos, exactos y vigentes, así como a mantenerlos debidamente actualizados.
+
+            Como Usuario del Sitio Web es el único responsable de la veracidad y corrección de los datos remitidos al Sitio Web exonerando al Titular de cualquier responsabilidad al respecto.
+        </p>
+
+        <h3 class="text-center text-dark mt-5" style="font-weight: 800;">Aceptación y consentimiento</h3>
+
+        <p style="width: 80%; margin: auto;">
+            Como Usuario del Sitio Web declara haber sido informado de las condiciones sobre protección de datos de carácter personal, acepta y consiente el tratamiento de los mismos por parte del Titular en la forma y para las finalidades indicadas en esta Política de Privacidad.
+
+            Para contactar con el Titular, suscribirse a un boletín o realizar comentarios en este sitio Web tiene que aceptar la presente Política de Privacidad.
+        </p>
+
+
+        <h3 class="text-center text-dark mt-5" style="font-weight: 800;">Cambios en la Política de Privacidad</h3>
+
+        <p style="width: 80%; margin: auto;">
+            El Titular se reserva el derecho a modificar la presente Política de Privacidad para adaptarla a novedades legislativas o jurisprudenciales, así como a prácticas de la industria.
+
+            Estas políticas estarán vigentes hasta que sean modificadas por otras debidamente publicadas.
+        </p>
+
+</div>
+
+
+<%- include ("./partials/pie") %> 

@@ -1,0 +1,258 @@
+<%- include ("./partials/cabecera") %> 
+
+<style>
+.oval-line {
+  width: 100%;
+  height: 150px;
+  border-bottom-left-radius: 40%;
+  border-bottom-right-radius: 40%;
+  background-color: rgb(18, 239, 18);
+  border-bottom: 2px solid #000;
+
+}
+
+.container {
+    position: relative;
+    display: inline-block;
+    margin-top: 50px;
+    width: 145px;
+}
+
+.container span {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 85%;
+    text-align: center;
+    color: white;
+    font-weight: 800;
+    font-size: 22px;
+}
+
+.container p {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 85%;
+    text-align: center;
+    color: white;
+    font-weight: 800;
+    font-size: 12px;
+}
+
+.container img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+    box-shadow: 0 22px 20px rgba(42, 84, 82, 0.5);
+    filter: brightness(0.5); /* Valor de brillo entre 0 y 1 */
+}
+
+@media (min-width: 800px) {
+    .container img{
+        width: 100%;
+    }
+  }
+@media (min-width: 700px) {
+    .cont-img{
+        margin-left: 300px !important;
+    }
+     .cont-img2{
+        margin-right: 300px !important;
+    }
+  }
+</style>
+
+<!-- Menu arriba -->
+<div class="oval-line">
+    <div>
+        <a href="">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNPMlucl9D07zGzdB3LtwYykQD1lVbwX75GA&usqp=CAU" alt="" style="width: 50px; border-radius: 50%; margin-top:45px; margin-left: 20px;">
+        </a>
+    </div>
+
+    <div class="text-center" style="margin-top: -70px;">
+        <span style="font-weight: 800; font-size: 20px;">Avisó Legal</span>
+    </div>
+    <div class="text-center">
+        <img class="" src="./logo/icon black.png" alt="" style="width: 60px;">
+    </div>
+    
+    <div style="width: 100%; margin-top: -10px;">
+        <div style="display: flex; justify-content: space-between;">
+            <a href="#">
+                <img class="cont-img" src="https://img.icons8.com/?size=512&id=2287GodioQ7D&format=png" alt="" style="width: 30px; margin-left: 70px;">
+            </a>
+        
+            <a href="#">
+                <img class="cont-img2" src="https://img.icons8.com/?size=512&id=Q4SSPv6y2vU9&format=png" alt="" style="width: 30px; margin-right: 70px;">
+            </a>
+        </div>
+    </div>
+
+</div>
+
+<div>
+    <ul class="text-center mt-4">
+        <li><a href="/login"> Inicio</a></li>
+        <li><a href="/politica-privacidad"> Política de Privacidad</a></li>
+        <li><a href="/poilitica-de-cookie"> Política de Cookies</a></li>
+        <li><a href="/aviso-legal">  Avisó Legal</a></li>
+
+    </ul>
+</div>
+
+<h3 class="text-dark text-center mt-5" style="font-weight: 800;">Avisó Legal</h3>
+
+<div style="background-color: burlywood; margin: 50px; border-radius: 20px;">
+
+    <h3 class="text-center text-dark pt-5" style="font-weight: 800;">Identificación y Titularidad</h3>
+
+    <p class="m-auto" style="width: 80%; margin-top: 50px; color: #000;">
+        En cumplimiento del artículo 10 de la Ley 34/2002, de 11 de julio, de Servicios de la Sociedad de la Información y 
+        Comercio Electrónico, el Titular expone sus datos identificativos:
+    </p>
+    <ul class="text-dark text-center pb-3">
+        <li style="font-weight: 600;">Responsable:</li> Cristian.
+        <li style="font-weight: 600;">Domicilio:</li> Santiago - Chile.
+        <li style="font-weight: 600;">Correo electrónico:</li> e.fit.super@gmail.com
+        <li style="font-weight: 600;">Sitio web:</li><a href="https://app-gym-production.up.railway.app"> https://app-gym-production.up.railway.app</a>
+    </ul>
+</div>
+
+<div class="text-center" style="background-color: burlywood; margin: 50px;  border-radius: 20px;">
+
+    <h3 class="text-center text-dark pt-5" style="font-weight: 800;">Condiciones de Uso</h3>
+
+    <p class="m-auto" style="width: 80%; margin-top: 50px; color: #000;">
+        La utilización del Sitio Web le otorga la condición de Usuario, e implica la aceptación completa de todas
+         las cláusulas y condiciones de uso incluidas en las páginas:
+    </p>
+    <ul class="text-dark text-center pb-3">
+        <li style="font-weight: 600;"><a href="https://app-gym-production.up.railway.app/aviso-legal">Aviso Legal</a></li>
+        <li style="font-weight: 600;"><a href="https://app-gym-production.up.railway.app/politica-privacidad">Política de Privacidad</a></li>
+        <li style="font-weight: 600;"><a href="https://app-gym-production.up.railway.app/politica-de-cookie">Política de Cookies</a></li>
+    </ul>
+    <p class="m-auto pb-3" style="width: 80%; margin-top: 50px; color: #000;">
+        Si no estuviera conforme con todas y cada una de estas cláusulas y condiciones absténgase de utilizar el Sitio Web.
+
+        El acceso al Sitio Web no supone, en modo alguno, el inicio de una relación comercial con el Titular.
+        
+        A través del Sitio Web, el Titular le facilita el acceso y la utilización de diversos contenidos que el Titular y/o sus colaboradores han publicado por medio de Internet.
+        
+        A tal efecto, está obligado y comprometido a NO utilizar cualquiera de los contenidos del Sitio Web con fines o efectos ilícitos, prohibidos en este Aviso Legal o por la legislación vigente, lesivos de los derechos e intereses de terceros, o que de cualquier forma puedan dañar, inutilizar, sobrecargar, deteriorar o impedir la normal utilización de los contenidos, los equipos informáticos o los documentos, archivos y toda clase de contenidos almacenados en cualquier equipo informático propios o contratados por el Titular, de otros usuarios o de cualquier usuario de Internet.
+        
+    </p>
+</div>
+
+<div class="text-center" style="background-color: burlywood; margin: 50px;  border-radius: 20px;">
+
+    <h3 class="text-center text-dark pt-5" style="font-weight: 800;">Medidas de seguridad</h3>
+
+    <p class="m-auto pb-3" style="width: 80%; margin-top: 50px; color: #000;">
+        Los datos personales que facilite al Titular pueden ser almacenados en bases de datos automatizadas o no, cuya titularidad corresponde en exclusiva al Titular, que asume todas las medidas de índole técnica, organizativa y de seguridad que garantizan la confidencialidad, integridad y calidad de la información contenida en las mismas de acuerdo con lo establecido en la normativa vigente en protección de datos.
+
+        No obstante, debe ser consciente de que las medidas de seguridad de los sistemas informáticos en Internet no son enteramente fiables y que, por tanto el Titular no puede garantizar la inexistencia de virus u otros elementos que puedan producir alteraciones en los sistemas informáticos (software y hardware) del Usuario o en sus documentos electrónicos y ficheros contenidos en los mismos aunque el Titular pone todos los medios necesarios y toma las medidas de seguridad oportunas para evitar la presencia de estos elementos dañinos.
+    </p>
+</div>
+
+<div class="text-center" style="background-color: burlywood; margin: 50px;  border-radius: 20px;">
+
+    <h3 class="text-center text-dark pt-5" style="font-weight: 800;">Tratamiento de Datos Personales</h3>
+
+    <p class="m-auto pb-3" style="width: 80%; margin-top: 50px; color: #000;">
+        Puede consultar toda la información relativa al tratamiento de datos personales que recoge el 
+        Titular en la página de <a href="https://app-gym-production.up.railway.app/politica-privacidad"> Política de Privacidad.</a>
+    </p>
+</div>
+
+<div class="text-center" style="background-color: burlywood; margin: 50px;  border-radius: 20px;">
+
+    <h3 class="text-center text-dark pt-5" style="font-weight: 800;">Contenidos</h3>
+
+    <p class="m-auto pb-3" style="width: 80%; margin-top: 50px; color: #000;">
+        El Titular ha obtenido la información, el contenido multimedia y los materiales incluidos en el Sitio Web de fuentes que considera fiables, pero, si bien ha tomado todas las medidas razonables para asegurar que la información contenida es correcta, el Titular no garantiza que sea exacta, completa o actualizada. El Titular declina expresamente cualquier responsabilidad por error u omisión en la información contenida en las páginas del Sitio Web.
+
+        Queda prohibido transmitir o enviar a través del Sitio Web cualquier contenido ilegal o ilícito, virus informáticos, o mensajes que, en general, afecten o violen derechos del Titular o de terceros.
+
+        Los contenidos del Sitio Web tienen únicamente una finalidad informativa y bajo ninguna circunstancia deben usarse ni considerarse como oferta de venta, solicitud de una oferta de compra ni recomendación para realizar cualquier otra operación, salvo que así se indique expresamente.
+
+        El Titular se reserva el derecho a modificar, suspender, cancelar o restringir el contenido del Sitio Web, los vínculos o la información obtenida a través del Sitio Web, sin necesidad de previo aviso.
+
+        El Titular no es responsable de los daños y perjuicios que pudieran derivarse de la utilización de la información del Sitio Web.
+    </p>
+</div>
+
+<div class="text-center" style="background-color: burlywood; margin: 50px;  border-radius: 20px;">
+
+    <h3 class="text-center text-dark pt-5" style="font-weight: 800;">Política de cookies</h3>
+
+    <p class="m-auto pb-3" style="width: 80%; margin-top: 50px; color: #000;">
+        Puede consultar toda la información relativa a la política de recogida y tratamiento de las cookies en la 
+        página de 
+    <a href="https://app-gym-production.up.railway.app/politica-privacidad">Política de Cookies.</a>
+    </p>
+</div>
+
+<div class="text-center" style="background-color: burlywood; margin: 50px;  border-radius: 20px;">
+
+    <h3 class="text-center text-dark pt-5" style="font-weight: 800;">Enlaces a otros sitios Web</h3>
+
+    <p class="m-auto pb-3" style="width: 80%; margin-top: 50px; color: #000;">
+        El Titular puede proporcionarle acceso a sitios Web de terceros mediante enlaces con la finalidad exclusiva de informar sobre la existencia de otras fuentes de información en Internet en las que podrá ampliar los datos ofrecidos en el Sitio Web.
+
+        Estos enlaces a otros sitios Web no suponen en ningún caso una sugerencia o recomendación para que usted visite las páginas web de destino, que están fuera del control del Titular, por lo que el Titular no es responsable del contenido de los sitios web vinculados ni del resultado que obtenga al seguir los enlaces. Asimismo, el Titular no responde de los links o enlaces ubicados en los sitios web vinculados a los que le proporciona acceso.
+
+        El establecimiento del enlace no implica en ningún caso la existencia de relaciones entre el Titular y el propietario del sitio en el que se establezca el enlace, ni la aceptación o aprobación por parte del Titular de sus contenidos o servicios.
+
+        Si accede a un sitio web externo desde un enlace que encuentre en el Sitio Web usted deberá leer la propia política de privacidad del otro sitio web que puede ser diferente de la de este sitio Web.
+
+    </p>
+</div>
+
+
+<div class="text-center" style="background-color: burlywood; margin: 50px;  border-radius: 20px;">
+
+    <h3 class="text-center text-dark pt-5" style="font-weight: 800;">Enlaces de Afiliados y anuncios patrocinados</h3>
+
+    <p class="m-auto pb-3" style="width: 80%; margin-top: 50px; color: #000;">
+        El Sitio Web ofrece contenidos patrocinados, anuncios y/o enlaces de afiliados.
+
+        La información que aparece en estos enlaces de afiliados o los anuncios insertados, son facilitados por los propios anunciantes, por lo que el Titular no se hace responsable de posibles inexactitudes o errores que pudieran contener los anuncios, ni garantiza en modo alguno la experiencia, integridad o responsabilidad de los anunciantes o la calidad de sus productos y/o servicios.
+    </p>
+</div>
+
+<div class="text-center" style="background-color: burlywood; margin: 50px;  border-radius: 20px;">
+
+    <h3 class="text-center text-dark pt-5" style="font-weight: 800;">Propiedad intelectual e industrial</h3>
+
+    <p class="m-auto pb-3" style="width: 80%; margin-top: 50px; color: #000;">
+        Todos los derechos están reservados. <br> <br>
+
+        Todo acceso a este Sitio Web está sujeto a las siguientes condiciones: la reproducción, almacenaje permanente y la difusión de los contenidos o cualquier otro uso que tenga finalidad pública o comercial queda expresamente prohibida sin el consentimiento previo expreso y por escrito del Titular.
+    </p>
+</div>
+
+<div class="text-center" style="background-color: burlywood; margin: 50px;  border-radius: 20px;">
+
+    <h3 class="text-center text-dark pt-5" style="font-weight: 800;">Limitación de responsabilidad</h3>
+
+    <p class="m-auto pb-3" style="width: 80%; margin-top: 50px; color: #000;">
+        El Titular declina cualquier responsabilidad en caso de que existan interrupciones o un mal funcionamiento de los Servicios o contenidos ofrecidos en Internet, cualquiera que sea su causa. Asimismo, el Titular no se hace responsable por caídas de la red, pérdidas de negocio a consecuencia de dichas caídas, suspensiones temporales de fluido eléctrico o cualquier otro tipo de daño indirecto que te pueda ser causado por causas ajenas a el Titular.
+
+        Antes de tomar decisiones y/o acciones con base a la información incluida en el Sitio Web, el Titular le recomienda comprobar y contrastar la información recibida con otras fuentes.
+    </p>
+</div>
+
+<div class="text-center" style="background-color: burlywood; margin: 50px;  border-radius: 20px;">
+
+    <h3 class="text-center text-dark pt-5" style="font-weight: 800;">Contacto</h3>
+
+    <p class="m-auto pb-3" style="width: 80%; margin-top: 50px; color: #000;">
+        En caso de que usted tenga cualquier duda acerca de este Aviso Legal o quiera realizar cualquier comentario sobre el Sitio Web, puede enviar un mensaje de correo electrónico a la dirección: e.fit.super@gmail.com
+    </p>
+</div>
+
+<%- include ("./partials/pie") %> 
