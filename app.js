@@ -303,7 +303,6 @@ if(Direccion.Comuna==null){
 // Confirmar pedido maquinas
 app.post('/confirm',permisosUser, async (req,res) => {
   var data = await jwt.obtenerDataCookie(req.headers.cookie).then( data => {return data});
-  console.log(data)
   var planDeportes;
   if (req.body.sup=='no') {
     planDeportes = await products.buscarProducto(parseInt(req.body.id));
@@ -347,7 +346,7 @@ app.get("/dev",async function(req,res){
   let compra=false;
 
   if (token && !tbkToken) {//Flujo 1
-    const tx = new WebpayPlus.Transaction(new Options(IntegrationCommerceCodes.WEBPAY_PLUS, IntegrationApiKeys.WEBPAY, Environment.Integration));
+    const tx = new WebpayPlus.Transaction(new Options(IntegrationCommerceCodes.WEBPAY_PLUS, IntegrationApiKeys.WEBPAY, Environment.Production));
     const commitResponse = await tx.commit(token);
     if(commitResponse.status=='AUTHORIZED'){
       commitResponse.email = data.email;
