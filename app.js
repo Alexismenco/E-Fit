@@ -257,7 +257,7 @@ if(Direccion.Comuna==null && req.query.plan>=3000){
   let buyOrder = "O-" + Math.floor(Math.random() * 10000) + 1;
   let sessionId = "S-" + Math.floor(Math.random() * 10000) + 1;
 
-  const tx = new WebpayPlus.Transaction(new Options(IntegrationCommerceCodes.WEBPAY_PLUS, IntegrationApiKeys.WEBPAY, Environment.Integration));
+  const tx = new WebpayPlus.Transaction(new Options(IntegrationCommerceCodes.WEBPAY_PLUS, IntegrationApiKeys.WEBPAY, Environment.Production));
   const response = await tx.create(buyOrder, sessionId, planDeportes.Precio, process.env.DIRECCIONRETORNO+'?product='+planDeportes.id);
   
   const token = response.token;
@@ -326,7 +326,7 @@ if(Direccion.Comuna==null){
   let buyOrder = "O-" + Math.floor(Math.random() * 10000) + 1;
   let sessionId = "S-" + Math.floor(Math.random() * 10000) + 1;
 
-  const tx = new WebpayPlus.Transaction(new Options(IntegrationCommerceCodes.WEBPAY_PLUS, IntegrationApiKeys.WEBPAY, Environment.Integration));
+  const tx = new WebpayPlus.Transaction(new Options(IntegrationCommerceCodes.WEBPAY_PLUS, IntegrationApiKeys.WEBPAY, Environment.Production));
   const response = await tx.create(buyOrder, sessionId, parseInt(req.body.monto), process.env.DIRECCIONRETORNO+'?product='+req.body.id);
   
   const token = response.token;
